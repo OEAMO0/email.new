@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Temp Mail</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Temporary Email</h1>
+
+        <div class="email-box">
+            <span id="email">Creating email...</span>
+            <button onclick="copyEmail()">📋</button>
+        </div>
+
+        <div class="controls">
+            <button onclick="createAccount()">Generate New Email</button>
+            <button onclick="fetchMessages()">Refresh Inbox</button>
+            <button onclick="showSavedEmails()">Saved Emails</button>
+        </div>
+
+        <div id="messageList" class="messages">No messages yet.</div>
+    </div>
+
+    <!-- Saved Emails Modal -->
+    <div id="savedEmailsModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeSavedEmails()">&times;</span>
+            <h2>Saved Emails</h2>
+            <ul id="savedEmailsList"></ul>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">Copied!</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
